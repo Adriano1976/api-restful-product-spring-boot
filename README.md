@@ -1,4 +1,4 @@
-# API Restful Product SpringS Boot
+# Api Restful Product Control com Spring Boot
 
 Esse projeto foi idealizado e construido seguindo as instruções da apostila Spring Boot Da API REST aos Microservices – 3ª Edição criada por Michelli Brito. Nela são criadas algumas regras de construção de uma api seguindo o modelo arquitetural de Roy Fielding em sua tese de doutorado de 6 regras que devem ser obrigatoriamente seguidas para uma aplicação ser considerada RESTful.
 
