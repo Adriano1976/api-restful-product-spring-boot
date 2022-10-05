@@ -1,6 +1,6 @@
 # API Restful Product SpringS Boot
 
-Esse projeto foi idealizado e construido seguindo as instruções da apostila Spring Boot - API Rest Microservices. Nela são criadas algumas regras de construção de uma api seguindo o modelo arquitetural de Roy Fielding em sua tese de doutorado de 6 regras que devem ser obrigatoriamente seguidas para uma aplicação ser considerada RESTful.
+Esse projeto foi idealizado e construido seguindo as instruções da apostila Spring Boot Da API REST aos Microservices – 3ª Edição criada por Michelli Brito. Nela são criadas algumas regras de construção de uma api seguindo o modelo arquitetural de Roy Fielding em sua tese de doutorado de 6 regras que devem ser obrigatoriamente seguidas para uma aplicação ser considerada RESTful.
 
 * A primeira regra diz que uma aplicação, neste caso uma API, deve ser cliente/servidor a fim de separar as responsabilidades.
 * A segunda regra diz que essa aplicação não guardar estado no servidor, para que cada requisição que o cliente envia ao servidor tenha informações relevantes e únicas para a resposta, assim independe qual servidor irá responder esse cliente caso a aplicação esteja escalada em múltiplos servidores, garantindo escalabilidade e disponibilidade.
@@ -26,4 +26,3 @@ Leonard Richardson propôs um modelo de maturidade composto por quatro níveis e
 * Implementando os métodos GET ALL e GET ONE
 * Implementando os métodos POST, DELETE e PUT
 * Inserindo as HATEOAS
-
