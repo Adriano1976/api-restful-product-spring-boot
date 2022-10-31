@@ -12,9 +12,11 @@ import java.util.UUID;
  * Classe responsável por representar o modelo da tabela na base de dados e servir como recurso
  * na URI da API. Ela também estende RepresentationModel para que através do seu método add(),
  * a classe ProdutoModel exiba a ligação das demais url's relacionado.
+ *
+ * @author Adriano Santos
  */
 @Entity // Define a classe como entidade no banco.
-@Table(name = "TB_PRODUCT") // Define o nome da tabela.
+@Table(name = "tab_product") // Define o nome da tabela.
 public class ProductModel extends RepresentationModel<ProductModel> implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;

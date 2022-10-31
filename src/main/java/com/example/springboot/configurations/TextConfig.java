@@ -10,15 +10,17 @@ import org.springframework.context.annotation.Profile;
 import java.util.Arrays;
 
 @Configuration
-@Profile("dev")
+@Profile("test")
 public class TextConfig implements CommandLineRunner {
 
     @Autowired
-    private ProductRepository ProductRepository;
+    private ProductRepository productRepository;
 
 
     @Override
     public void run(String... args) throws Exception {
+
+        productRepository.deleteAll();
 
         ProductModel Product1 = new ProductModel(null, "Notebook Apple 7", 9000.00);
         ProductModel Product2 = new ProductModel(null, "Samsung S10", 4000.00);
@@ -26,6 +28,6 @@ public class TextConfig implements CommandLineRunner {
         ProductModel Product4 = new ProductModel(null, "Iphone 11 ATUALIZADO", 6500.00);
         ProductModel Product5 = new ProductModel(null, "Desktop Samsung HD 500G - 8G memória", 4000.00);
 
-        ProductRepository.saveAll(Arrays.asList(Product1, Product2, Product3, Product4, Product5));
+        productRepository.saveAll(Arrays.asList(Product1, Product2, Product3, Product4, Product5));
     }
 }
