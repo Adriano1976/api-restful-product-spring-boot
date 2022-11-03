@@ -28,3 +28,17 @@ Leonard Richardson propôs um modelo de maturidade composto por quatro níveis e
 * Implementando os métodos GET ALL e GET ONE
 * Implementando os métodos POST, DELETE e PUT
 * Inserindo as HATEOAS
+
+# Front End com Swagger
+
+Depois de executar o projeto via terminal ou via IDE, você poderá fazer os testes com os recursos disponibilizados pelo Swagger de acordo com o projeto atual.
+
+![Spring Boot REST API - Lista de Produtos e Usuários](https://user-images.githubusercontent.com/17755195/199840504-b9cf4851-a675-431f-aede-b4c76dfb45e8.png)
+
+* http://localhost:8080/swagger-ui.html
+
+# Autor do Projeto
+
+Adriano Santos
+
+https://www.linkedin.com/in/adrianosantos-dev/
