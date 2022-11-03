@@ -19,11 +19,11 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Define que o id deve ser gerado automaticamente.
     @Column(name = "id_user") // Define o nome da coluna do banco.
     private Integer id;
-    @Column(length = 50, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "name", length = 50, nullable = false) // Define a configuraçaõ da coluna do banco.
     private String name;
-    @Column(length = 20, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "username",length = 20, nullable = false) // Define a configuraçaõ da coluna do banco.
     private String username;
-    @Column(length = 100, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "password",length = 100, nullable = false) // Define a configuraçaõ da coluna do banco.
     private String password;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -31,24 +31,7 @@ public class UserModel {
     @Column(name = "role_id")
     private List<String> roles = new ArrayList<>();
 
-    /**
-     * Define um construtor sem parâmetro.
-     */
     public UserModel() {
-    }
-
-    /**
-     * Define um construtor parâmetro
-     * @param id Objeto responsável em receber um ‘id’ do usuário.
-     * @param name Objeto responsável em receber um ‘nome’ do usuário.
-     * @param username Objeto responsável em receber um ‘nome de usuário’.
-     * @param password Objeto responsável em receber um ‘a senha’ do usuário.
-     */
-    public UserModel(Integer id, String name, String username, String password) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.password = password;
     }
 
     public Integer getId() {
