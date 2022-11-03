@@ -1,5 +1,6 @@
 package com.example.springboot.security;
 
+import com.example.springboot.configurations.SecurityConfig;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;

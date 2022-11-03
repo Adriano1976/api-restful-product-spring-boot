@@ -1,5 +1,6 @@
-package com.example.springboot.security;
+package com.example.springboot.configurations;
 
+import com.example.springboot.security.JWTFilter;
 import org.apache.catalina.servlets.WebdavServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -59,8 +60,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         ServletRegistrationBean<WebdavServlet> registrationBean = new ServletRegistrationBean<>(new WebdavServlet());
         registrationBean.addUrlMappings("/h2-console/*");
-        registrationBean.addInitParameter("webAllowOthers", "true");
-        registrationBean.addInitParameter("webPort", "7777");
         return registrationBean;
     }
 }

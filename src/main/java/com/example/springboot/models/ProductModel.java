@@ -1,5 +1,6 @@
 package com.example.springboot.models;
 
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
@@ -16,18 +17,21 @@ import java.util.UUID;
  * @author Adriano Santos
  */
 @Entity // Define a classe como entidade no banco.
-@Table(name = "tab_product") // Define o nome da tabela.
+@Table(name = "`tab_product`") // Define o nome da tabela.
 public class ProductModel extends RepresentationModel<ProductModel> implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // Define que o id deve ser gerado automaticamente.
-    @Column(name = "id_product", nullable = false) // Define o nome da coluna do banco.
+    @Column(name = "`id_product`", nullable = false) // Define o nome da coluna do banco.
+    @ApiModelProperty(value = "Código do produto")
     private UUID idProduct;
-    @Column(name = "name", length = 100, nullable = false) // Define o nome da coluna do banco.
+    @Column(name = "`name`", length = 100, nullable = false) // Define o nome da coluna do banco.
+    @ApiModelProperty(value = "Nome do produto")
     private String name;
-    @Column(name = "price", length = 10, nullable = false) // Define o nome da coluna do banco.
+    @Column(name = "`price`", length = 10, nullable = false) // Define o nome da coluna do banco.
+    @ApiModelProperty(value = "Preço do produto")
     private BigDecimal price;
 
     /**

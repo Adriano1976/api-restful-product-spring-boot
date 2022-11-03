@@ -1,4 +1,4 @@
-package com.example.springboot.security;
+package com.example.springboot.configurations;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

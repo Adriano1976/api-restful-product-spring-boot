@@ -2,6 +2,9 @@ package com.example.springboot.controllers;
 
 import com.example.springboot.models.ProductModel;
 import com.example.springboot.repositories.ProductRepository;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +25,10 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 public class ProductController {
 
+    /**
+     * A anotacao @Autowired no objeto produto, informa que o Spring sera responsavel por
+     * estanciar o objeto quando for chamado aqui na classe.
+     */
     @Autowired
     ProductRepository productRepository;
 
@@ -34,7 +41,13 @@ public class ProductController {
      *
      * @return Retorna uma lista com todos os Products encontrados na base de dados, com um status.
      */
-    @GetMapping(value = "/products")
+    @ApiOperation(value = "Retorna uma lista de produto da base de dados")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que os produtos foram encontrados."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @GetMapping(value = "/products", produces = "application/json")
     public ResponseEntity<List<ProductModel>> getAllProducts() {
 
         List<ProductModel> productList = productRepository.findAll();
@@ -58,7 +71,13 @@ public class ProductController {
      * @param id Objeto responsável em receber o ‘id’ do Product encontrado.
      * @return Retorna os dados de um Product encontrado conforme o ‘id’, com o status.
      */
-    @GetMapping(value = "/product/{id}")
+    @ApiOperation(value = "Retorna um produto específico de acordo com o id na base de dados")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que um produto foi encontrado com sucesso."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @GetMapping(value = "/product/{id}", produces = "application/json")
     public ResponseEntity<ProductModel> getOneProduct(@PathVariable(value = "id") UUID id) {
 
         Optional<ProductModel> productOptional = productRepository.findById(id);
@@ -77,7 +96,13 @@ public class ProductController {
      * @param productModel Objeto responsável em receber e manipular os dados do novo Product para a base de dados.
      * @return Retorna a mensagem com o código 202 se os dados foram salvos corretamente.
      */
-    @PostMapping(value = "/products")
+    @ApiOperation(value = "Faz a inserção de um novo produto na base de dados.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que um novo produto foi salvo com sucesso."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @PostMapping(value = "/products", produces = "application/json", consumes = "application/json")
     public ResponseEntity<ProductModel> saveProduct(@RequestBody @Validated ProductModel productModel) {
         return new ResponseEntity<>(productRepository.save(productModel), HttpStatus.CREATED);
     }
@@ -89,7 +114,13 @@ public class ProductController {
      * @param id Objeto responsável em receber o número do id do Product a ser apagodo.
      * @return Retorna o código 200 como sendo OK caso a deleção ocorra corretamente.
      */
-    @DeleteMapping(value = "/products/{id}")
+    @ApiOperation(value = "Apaga um produto específico de acordo com o id na base de dados.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que o produto específico foi apagado com sucesso."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @DeleteMapping(value = "/products/{id}", produces = "application/json")
     public ResponseEntity<?> deleteProduct(@PathVariable(value = "id") UUID id) {
         Optional<ProductModel> ProductOptional = productRepository.findById(id);
 
@@ -109,7 +140,13 @@ public class ProductController {
      * @param productModel Objeto responsável em receber e manipular o Product já identificado.
      * @return Retorna o código 200 como sendo OK caso a alteração ocorra corretamente.
      */
-    @PutMapping(value = "/products/{id}")
+    @ApiOperation(value = "Altera um produto específico de acordo com o id na base de dados.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que o produto foi alterado com sucesso."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @PutMapping(value = "/products/{id}", produces = "application/json")
     public ResponseEntity<ProductModel> updateProduct(@PathVariable(value = "id") UUID id, @RequestBody @Validated ProductModel productModel) {
         Optional<ProductModel> ProductOptional = productRepository.findById(id);
 

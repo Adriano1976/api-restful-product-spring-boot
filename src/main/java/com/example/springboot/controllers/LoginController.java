@@ -6,8 +6,11 @@ import com.example.springboot.models.UserModel;
 import com.example.springboot.repositories.UserRepository;
 import com.example.springboot.security.JWTCreator;
 import com.example.springboot.security.JWTObject;
-import com.example.springboot.security.SecurityConfig;
+import com.example.springboot.configurations.SecurityConfig;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,7 +32,13 @@ public class LoginController {
     @Autowired
     private SecurityConfig securityConfig;
 
-    @PostMapping("/login")
+    @ApiOperation(value = "Faz a inserção de um novo login na base de dados.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Retorna uma confirmação de que um novo login foi salvo com sucesso."),
+            @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção")
+    })
+    @PostMapping(value = "/login", produces = "application/json", consumes = "application/json")
     public Sessao logar(@RequestBody Login login) {
 
         UserModel userModel = repository.findByUsername(login.getUsername());

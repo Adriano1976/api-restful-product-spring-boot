@@ -1,6 +1,10 @@
 package com.example.springboot.models;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,23 +16,30 @@ import java.util.List;
  * @author Adriano Santos
  */
 @Entity // Define a classe como entidade no banco.
-@Table(name = "tab_user") // Define o nome da tabela.
-public class UserModel {
+@Table(name = "`tab_user`") // Define o nome da tabela.
+public class UserModel implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Define que o id deve ser gerado automaticamente.
-    @Column(name = "id_user") // Define o nome da coluna do banco.
+    @Column(name = "`id_user`") // Define o nome da coluna do banco.
+    @ApiModelProperty(value = "Código do usuário")
     private Integer id;
-    @Column(name = "name", length = 50, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "`name`", length = 50, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @ApiModelProperty(value = "Nome do usuário")
     private String name;
-    @Column(name = "username",length = 20, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "`username`",length = 20, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @ApiModelProperty(value = "Login do usuário")
     private String username;
-    @Column(name = "password",length = 100, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @Column(name = "`password`",length = 100, nullable = false) // Define a configuraçaõ da coluna do banco.
+    @ApiModelProperty(value = "Senha do usuário")
     private String password;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "tab_user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role_id")
+    @Column(name = "`role_id`")
     private List<String> roles = new ArrayList<>();
 
     public UserModel() {
