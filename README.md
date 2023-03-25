@@ -47,7 +47,7 @@ Leonard Richardson propôs um modelo de maturidade composto por quatro níveis e
 * Implementando os métodos POST, DELETE e PUT
 * Inserindo as HATEOAS
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Intellij Ide
 - Java 17
@@ -77,6 +77,22 @@ Existem várias razões pelas quais aprender a trabalhar com o IntelliJ IDEA pod
 * Personalização: O IntelliJ IDEA é altamente personalizável e pode ser configurado para atender às suas necessidades de desenvolvimento específicas. Você pode instalar plugins para adicionar novos recursos e ajustar as configurações para otimizar a IDE para o seu fluxo de trabalho.
 
 Em resumo, aprender a trabalhar com o IntelliJ IDEA pode ajudá-lo a escrever código com mais rapidez e eficiência, permitir que você trabalhe em vários projetos e linguagens de programação, e integrar com outras ferramentas de desenvolvimento. Além disso, sua comunidade ativa e a capacidade de personalizar a IDE tornam o IntelliJ IDEA uma opção atraente para muitos programadores.
+
+## Por que devo aprender a trabalhar com Maven no Framework Spring?
+
+Aprender a trabalhar com Maven no Framework Spring pode ser benéfico por vários motivos:
+
+* Gerenciamento de dependências: O Maven é uma ferramenta de gerenciamento de dependências que ajuda a gerenciar as dependências do projeto, incluindo bibliotecas, frameworks e plugins. Isso torna o processo de construção e implementação do projeto mais fácil e eficiente.
+
+* Padronização: O Maven é uma ferramenta amplamente utilizada na comunidade de desenvolvimento, o que significa que muitos projetos são construídos usando o Maven. Ao aprender a trabalhar com o Maven, você estará aprendendo uma habilidade padronizada que pode ser aplicada a muitos projetos diferentes.
+
+* Configuração simplificada: O Maven é uma ferramenta que simplifica a configuração do projeto, fornecendo uma estrutura padrão para a organização do código-fonte, recursos e testes. Isso facilita a construção de um projeto Spring sem ter que configurar tudo manualmente.
+
+* Eficiência: O Maven permite automatizar a construção do projeto, incluindo compilação, teste, empacotamento e distribuição. Isso economiza tempo e esforço, especialmente em projetos grandes e complexos.
+
+* Integração: O Maven é frequentemente usado em conjunto com o Framework Spring e outras ferramentas de desenvolvimento, como IDEs e sistemas de controle de versão. Aprender a trabalhar com o Maven pode ajudá-lo a integrar melhor essas ferramentas e maximizar sua eficiência no desenvolvimento.
+
+Em resumo, aprender a trabalhar com Maven no Framework Spring pode ajudá-lo a gerenciar melhor as dependências do projeto, padronizar suas habilidades de desenvolvimento, simplificar a configuração do projeto, aumentar a eficiência na construção e integração com outras ferramentas de desenvolvimento.
 
 # Como executar o projeto
 
