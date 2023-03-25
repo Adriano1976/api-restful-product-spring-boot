@@ -48,6 +48,7 @@ Leonard Richardson propôs um modelo de maturidade composto por quatro níveis e
 * Inserindo as HATEOAS
 
 # Tecnologias utilizadas
+
 - Intellij Ide
 - Java 17
 - Spring Boot
@@ -60,6 +61,22 @@ Leonard Richardson propôs um modelo de maturidade composto por quatro níveis e
 - Webjars / Bootstrap / Webjars-locator
 - Swagger-ui / Suagger2
 - Maven
+
+## Por que aprender a trabalhar com Intellij IDE?
+
+Existem várias razões pelas quais aprender a trabalhar com o IntelliJ IDEA pode ser benéfico para você como programador. Aqui estão algumas das principais:
+
+* Produtividade: O IntelliJ IDEA é uma IDE altamente produtiva que permite que você escreva código mais rápido e com menos erros. Ele possui recursos avançados, como preenchimento automático de código, refatoração de código, depuração avançada e muito mais, que podem economizar muito tempo e aumentar a eficiência.
+
+* Compatibilidade: O IntelliJ IDEA é compatível com muitas linguagens de programação diferentes, incluindo Java, Kotlin, Python, PHP, JavaScript e outros. Isso significa que você pode usar a mesma IDE para trabalhar em vários projetos, em vez de precisar mudar de IDE para cada linguagem de programação.
+
+* Comunidade: O IntelliJ IDEA é um dos IDEs mais populares no mercado e tem uma grande comunidade de desenvolvedores ativos. Isso significa que há muitos recursos disponíveis online, como fóruns de discussão, blogs e tutoriais, que podem ajudá-lo a aprender e resolver problemas com a IDE.
+
+* Integração: O IntelliJ IDEA pode ser integrado com muitas outras ferramentas de desenvolvimento, como sistemas de controle de versão, sistemas de construção, servidores de aplicativos e muito mais. Isso torna o fluxo de trabalho de desenvolvimento mais suave e eficiente.
+
+* Personalização: O IntelliJ IDEA é altamente personalizável e pode ser configurado para atender às suas necessidades de desenvolvimento específicas. Você pode instalar plugins para adicionar novos recursos e ajustar as configurações para otimizar a IDE para o seu fluxo de trabalho.
+
+Em resumo, aprender a trabalhar com o IntelliJ IDEA pode ajudá-lo a escrever código com mais rapidez e eficiência, permitir que você trabalhe em vários projetos e linguagens de programação, e integrar com outras ferramentas de desenvolvimento. Além disso, sua comunidade ativa e a capacidade de personalizar a IDE tornam o IntelliJ IDEA uma opção atraente para muitos programadores.
 
 # Como executar o projeto
 
