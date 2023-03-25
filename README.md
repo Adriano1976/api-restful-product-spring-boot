@@ -1,8 +1,24 @@
 # Api Restful Product Control com Spring Boot
 
+## Por que devo trabalhar com o Framework Spring Boot?
+
+Existem várias razões pelas quais você deve aprender a trabalhar com o Spring Boot, um dos frameworks mais populares para o desenvolvimento de aplicativos Java:
+
+* Produtividade: O Spring Boot permite que você crie aplicativos Java de maneira rápida e fácil, com configuração mínima. Isso significa que você pode se concentrar no desenvolvimento de recursos de negócios em vez de configuração de infraestrutura.
+
+* Flexibilidade: O Spring Boot é altamente flexível e pode ser facilmente integrado com outras tecnologias Java, como o Spring Framework, Hibernate, JPA, entre outros. Além disso, o Spring Boot suporta diferentes bancos de dados e sistemas operacionais.
+
+* Eficiência: O Spring Boot é altamente otimizado para desempenho e escalabilidade, permitindo que seus aplicativos sejam executados rapidamente e gerenciem grandes volumes de dados.
+
+* Segurança: O Spring Boot inclui várias funcionalidades de segurança, como autenticação e autorização, que ajudam a proteger seus aplicativos contra ameaças externas.
+
+* Comunidade: O Spring Boot é um framework de código aberto com uma grande comunidade de desenvolvedores ativos. Isso significa que você pode encontrar muitos recursos, tutoriais e exemplos disponíveis online para ajudá-lo a aprender e desenvolver aplicativos.
+
+Em resumo, aprender a trabalhar com o Spring Boot pode ajudá-lo a desenvolver aplicativos Java com facilidade, flexibilidade, eficiência e segurança, permitindo que você se concentre no desenvolvimento de recursos de negócios em vez de configuração de infraestrutura. Além disso, a comunidade ativa do Spring Boot oferece suporte e recursos valiosos para ajudá-lo a se tornar um desenvolvedor mais habilidoso.
+
 Primeiramente gostaria de agradecer a [Michelli Brito](https://github.com/MichelliBrito) pela sua dedicação em ensinar a programação em seu [Canal do YouTube Michelli Brito](https://www.youtube.com/c/MichelliBrito), pois tenho aprendido muito e adquirindo novos conhecimentos. E também gostaria de agradecer [Professor Gleyson Sampaio](https://www.youtube.com/@gleysonsampaio8689) que ministra algumas aulas na plataforma [Digital Innovation One](https://www.dio.me/)
 
-Esse projeto foi idealizado e construido seguindo as instruções da apostila Spring Boot Da API REST aos Microservices – 3ª Edição criada por [Michelli Brito](https://github.com/MichelliBrito). Depois disso, resolvir complementar o projeto com mais algumas funcionalidade como na parte da segurança reforçado com Token e outras mais de forma a colocar em prática alguns conhecimentos adquiridos em apostilas e vídeos aulas. O objetivo desse trabalho era criar uma api de controle de produtos com os métodos de Inserção, Visualização, Alteração e Remoção de dados sobre o produto. Nela são criadas algumas regras de construção de uma api seguindo o modelo arquitetural de Roy Fielding em sua tese de doutorado de 6 regras que devem ser obrigatoriamente seguidas para uma aplicação ser considerada RESTful.
+Vejamos como exemplo esse projeto pelo qual foi idealizado e construido seguindo as instruções da apostila Spring Boot Da API REST aos Microservices – 3ª Edição criada por [Michelli Brito](https://github.com/MichelliBrito). Depois disso, resolvir complementar o projeto com mais algumas funcionalidade como na parte da segurança reforçado com Token e outras mais de forma a colocar em prática alguns conhecimentos adquiridos em apostilas e vídeos aulas. O objetivo desse trabalho era criar uma api de controle de produtos com os métodos de Inserção, Visualização, Alteração e Remoção de dados sobre o produto. Nela são criadas algumas regras de construção de uma api seguindo o modelo arquitetural de Roy Fielding em sua tese de doutorado de 6 regras que devem ser obrigatoriamente seguidas para uma aplicação ser considerada RESTful.
 
 * A primeira regra diz que uma aplicação, neste caso uma API, deve ser cliente/servidor a fim de separar as responsabilidades.
 * A segunda regra diz que essa aplicação não guardar estado no servidor, para que cada requisição que o cliente envia ao servidor tenha informações relevantes e únicas para a resposta, assim independe qual servidor irá responder esse cliente caso a aplicação esteja escalada em múltiplos servidores, garantindo escalabilidade e disponibilidade.
